@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Latihan Membuat Link Ke Dokumen Lain</title>
+    <link rel="stylesheet" type="text/css" href="galeri.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #E3F2FD, #BBDEFB);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #003C43;
+            margin-top: 20px;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px; /* Jarak antar galeri */
+        }
+
+        .gallery {
+            border: 2px solid #ADD8E6; /* Border biru muda */
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .gallery:hover {
+            transform: scale(1.05); /* Efek zoom saat hover */
+        }
+
+        .gallery img, .gallery video {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc {
+            padding: 10px;
+            color: #003C43;
+            font-size: 14px;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #eee;
+        }
+
+        /* Untuk responsive */
+        @media (max-width: 600px) {
+            .flex {
+                flex-direction: column; /* Menjadi kolom pada layar kecil */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Tempat Wisata Goa Gong</h3>
+        <div class="flex">
+            <div class="gallery">
+                <a target="_blank" href="img/pintuutama.jpg">
+                    <img src="pintuutama.jpg" alt="Pintu Utama">
+                </a>
+                <div class="desc">Gambar menunjukkan pintu masuk Goa Gong, dengan latar belakang bebatuan alam dan hiasan batu stalaktit yang khas.</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="img/sklatis2.jpg">
+                    <img src="sklatis2.jpg" alt="Stalaktit dan Stalagmit">
+                </a>
+                <div class="desc">Gambar memperlihatkan formasi stalaktit dan stalagmit indah di dalam Goa Gong, yang terbentuk secara alami selama ribuan tahun.</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="img/ruangutama.jpg">
+                    <img src="ruangutama.jpg" alt="Ruang utama">
+                </a>
+                <div class="desc">Gambar menampilkan ruang utama Goa Gong, di mana pengunjung dapat melihat pencahayaan yang menyoroti formasi batu yang menyerupai gong.</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="img/pantulancahaya.jpg">
+                    <img src="pantulancahaya.jpg" alt="Pantulan cahaya">
+                </a>
+                <div class="desc">Gambar memperlihatkan pantulan cahaya di dinding goa yang memberikan efek visual menakjubkan pada bebatuan di dalam goa.</div>
+            </div>
+
+            <div class="gallery">
+                <img src="pencahayaan.jpg" alt="Keindahan interior">
+                <div class="desc">Gambar memperlihatkan keindahan interior Goa Gong dengan pencahayaan warna-warni yang menambah suasana magis di dalam goa.</div>
+            </div>
+
+            <div class="gallery">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    <source src="video.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                </video>
+                <div class="desc">Video singkat tempat-tempat Goa Gong</div>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="audio-section">
+            <h4>Suara Goa Gong</h4>
+            <audio controls>
+                <source src="audio.mp3" type="audio/ogg">
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+
+</html>

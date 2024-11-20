@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>::: Buku Tamu :::</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #E3F2FD, #BBDEFB);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h3 {
+            text-align: center;
+            color: #0277BD;
+            margin-top: 20px;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 500px;
+            height: auto; /* Menyesuaikan tinggi kontainer */
+            overflow-y: auto;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+        .container:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="url"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 2px solid #90CAF9;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus {
+            border-color: #0288D1;
+            outline: none;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #0288D1;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0277BD;
+            transform: translateY(-1px);
+        }
+        hr {
+            margin-top: 20px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>BUKU TAMU</h3>
+        <form method="post">
+            <table border="0">
+                <tr>
+                    <td width="30%">Nama</td>
+                    <td width="3%">:</td>
+                    <td width="67%"><input type="text" name="nama" size="20" required></td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td><input type="text" name="alamat" size="30" value="Jl." required></td>
+                </tr> 
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="email" name="email" size="20" required></td>
+                </tr> 
+                <tr>
+                    <td>Website</td>
+                    <td>:</td>
+                    <td><input type="url" name="website" size="30" value="http://"></td>
+                </tr>
+                <tr>
+                    <td valign="top">Homepageku</td>
+                    <td valign="top">:</td>
+                    <td>
+                        <input type="radio" value="Bagus Sekali" name="saran" checked>Bagus Sekali<br>
+                        <input type="radio" value="Bagus" name="saran">Bagus<br>
+                        <input type="radio" value="Biasa" name="saran">Biasa Aja<br>
+                    </td>
+                </tr>
+            </table>
+            <p align="center">
+                <input type="submit" value="Kirim" name="b1">
+                <input type="reset" value="Batal" name="b2">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
